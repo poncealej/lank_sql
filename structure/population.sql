@@ -1,3 +1,5 @@
+USE Lank; 
+
 -- Agregar datos a la tabla Usuarios
 INSERT INTO Usuarios (nombre, correo_electronico, contrasena, fecha_de_registro)
 VALUES 
