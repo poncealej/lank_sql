@@ -1,3 +1,5 @@
+USE Lank;
+
 DELIMITER //
 CREATE FUNCTION UsuarioTieneSuscripcionActiva(userID INT) 
 RETURNS BOOLEAN

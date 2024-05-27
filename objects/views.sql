@@ -1,3 +1,5 @@
+USE Lank; 
+
 -- Vista de Usuarios con Suscripciones
 
 CREATE VIEW VistaUsuariosConSuscripciones AS

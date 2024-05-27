@@ -1,3 +1,5 @@
+USE Lank;
+
 CREATE TABLE IF NOT EXISTS RegistroCambios (
 CambiosID INT PRIMARY KEY AUTO_INCREMENT, 
 accion VARCHAR(255), 
@@ -33,11 +35,11 @@ DELIMITER ;
 
 DELIMITER //
 CREATE TRIGGER ValidarCantidadSuscripcionesPorUsuario
-BEFORE INSERT ON Suscripciones
+BEFORE INSERT ON suscripciones
 FOR EACH ROW
 BEGIN
     DECLARE cantidad_suscripciones INT;
-    SET cantidad_suscripciones = (SELECT COUNT(*) FROM Suscripciones WHERE userID = NEW.userID);
+    SET cantidad_suscripciones = (SELECT COUNT(*) FROM suscripciones WHERE userID = NEW.userID);
     IF cantidad_suscripciones >= 1 THEN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El usuario ya tiene una suscripción activa';
         ELSE 
@@ -45,8 +47,3 @@ BEGIN
     END IF;
 END//
 DELIMITER ;
-
-
-
-
-

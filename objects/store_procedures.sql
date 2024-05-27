@@ -1,3 +1,5 @@
+USE Lank; 
+
 DELIMITER //
 CREATE PROCEDURE EliminarUsuario(IN userID INT)
 BEGIN
