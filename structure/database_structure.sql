@@ -64,7 +64,7 @@ CREATE TABLE Facturacion (
     fecha DATE,
     FOREIGN KEY (userID) REFERENCES Usuarios(userID),
     FOREIGN KEY (empresaID) REFERENCES Empresa(empresaID),
-    FOREIGN KEY (subscriptionID) REFERENCES Suscripciones(subscriptionID),
+    FOREIGN KEY (subscriptionID) REFERENCES suscripciones(subscriptionID),
     FOREIGN KEY (medioID) REFERENCES Medios_de_Pago(medioID)
 );
 
@@ -87,7 +87,7 @@ CREATE TABLE Ventas (
     fecha_venta DATETIME, -- Cambio a DATETIME para incluir la hora de la compra
     FOREIGN KEY (userID) REFERENCES Usuarios(userID),
     FOREIGN KEY (medioID) REFERENCES Medios_de_Pago(medioID),
-    FOREIGN KEY (plataformaID) REFERENCES plataformas(plataformaID)
+    FOREIGN KEY (PlataformaID) REFERENCES Plataformas(PlataformaID)
 );
 
 
