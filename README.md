@@ -1,3 +1,7 @@
+## Diagrama entidad relación
+<center>
+<img src="/workspaces/lank_sql/Diagrama de entidad.png" style="width: 100% ; aspect-ratio:16/9">
+</center>
 ## Listado de Tablas y Descripción
 
 El script para la creación y definición de la base de datos se encuentra en el archivo database_structure.sql, ubicado en la carpeta structure.
