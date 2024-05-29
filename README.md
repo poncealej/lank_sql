@@ -14,7 +14,7 @@ A continuación se presenta la descripción de cada una de las tablas de la base
 
 | Campo               | Tipo         | Null | Key  | Default | Extra          |
 |---------------------|--------------|------|------|---------|----------------|
-| userID              | INT          | NO   | PRI  | NULL    | AUTO_INCREMENT |
+| userID              | INT          | NO   | PK   | NULL    | AUTO_INCREMENT |
 | nombre              | VARCHAR(255) | YES  |      | NULL    |                |
 | correo_electronico  | VARCHAR(255) | YES  |      | NULL    |                |
 | contrasena          | VARCHAR(255) | YES  |      | NULL    |                |
@@ -27,7 +27,7 @@ A continuación se presenta la descripción de cada una de las tablas de la base
 
 | Campo               | Tipo         | Null | Key  | Default | Extra          |
 |---------------------|--------------|------|------|---------|----------------|
-| subscriptionID      | INT          | NO   | PRI  | NULL    | AUTO_INCREMENT |
+| subscriptionID      | INT          | NO   | PK   | NULL    | AUTO_INCREMENT |
 | userID              | INT          | YES  | FK   | NULL    |                |
 | tipo_de_suscripcion | VARCHAR(255) | YES  |      | NULL    |                |
 | fecha_de_inicio     | DATE         | YES  |      | NULL    |                |
@@ -37,14 +37,14 @@ A continuación se presenta la descripción de cada una de las tablas de la base
 
 | Campo   | Tipo | Null | Key  | Default | Extra |
 |---------|------|------|------|---------|-------|
-| groupID | INT  | NO   | PRI  | NULL    |       |
-| userID  | INT  | NO   | PRI  | NULL    | FK    |
+| groupID | INT  | NO   | PK   | NULL    |       |
+| userID  | INT  | NO   | PK   | NULL    | FK    |
 
 ### Tabla `Empresa`
 
 | Campo           | Tipo         | Null | Key  | Default | Extra |
 |-----------------|--------------|------|------|---------|-------|
-| empresaID       | INT          | NO   | PRI  | NULL    |       |
+| empresaID       | INT          | NO   | PK   | NULL    |       |
 | nombre_empresa  | VARCHAR(255) | YES  |      | NULL    |       |
 | direccion       | VARCHAR(255) | YES  |      | NULL    |       |
 | telefono        | VARCHAR(20)  | YES  |      | NULL    |       |
@@ -54,14 +54,14 @@ A continuación se presenta la descripción de cada una de las tablas de la base
 
 | Campo        | Tipo         | Null | Key  | Default | Extra          |
 |--------------|--------------|------|------|---------|----------------|
-| medioID      | INT          | NO   | PRI  | NULL    | AUTO_INCREMENT |
+| medioID      | INT          | NO   | PK   | NULL    | AUTO_INCREMENT |
 | nombre_medio | VARCHAR(255) | YES  |      | NULL    |                |
 
 ### Tabla `Facturacion`
 
 | Campo         | Tipo          | Null | Key  | Default | Extra          |
 |---------------|---------------|------|------|---------|----------------|
-| facturaID     | INT           | NO   | PRI  | NULL    | AUTO_INCREMENT |
+| facturaID     | INT           | NO   | PK   | NULL    | AUTO_INCREMENT |
 | userID        | INT           | YES  | FK   | NULL    |                |
 | medioID       | INT           | YES  | FK   | NULL    |                |
 | empresaID     | INT           | YES  | FK   | NULL    |                |
@@ -73,14 +73,14 @@ A continuación se presenta la descripción de cada una de las tablas de la base
 
 | Campo            | Tipo         | Null | Key  | Default | Extra          |
 |------------------|--------------|------|------|---------|----------------|
-| PlataformaID     | INT          | NO   | PRI  | NULL    | AUTO_INCREMENT |
+| PlataformaID     | INT          | NO   | PK   | NULL    | AUTO_INCREMENT |
 | nombre_plataforma| VARCHAR(255) | YES  |      | NULL    |                |
 
 ### Tabla `Ventas`
 
 | Campo        | Tipo          | Null | Key  | Default | Extra          |
 |--------------|---------------|------|------|---------|----------------|
-| ventaID      | INT           | NO   | PRI  | NULL    | AUTO_INCREMENT |
+| ventaID      | INT           | NO   | PK   | NULL    | AUTO_INCREMENT |
 | userID       | INT           | YES  | FK   | NULL    |                |
 | medioID      | INT           | YES  | FK   | NULL    |                |
 | PlataformaID | INT           | YES  | FK   | NULL    |                |
